@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+    ###> doctrine/doctrine-bundle ###
+    mysql:
+        image: mysql:latest
+        container_name: mysql
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: 'root'
+        volumes:
+            - database_data:/var/lib/mysql
+        restart: unless-stopped
+    ###< doctrine/doctrine-bundle ###
+    mailcatcher:
+        image: schickling/mailcatcher
+        container_name: mailcatcher
+        ports:
+            - '1025:1025'
+            - '1080:1080'
+        restart: unless-stopped
+
+# Example forumify docker-compose entry for local image testing
+#    forumify:
+#        build: .
+#        container_name: forumify
+#        ports:
+#            - '8080:80'
+#        environment:
+#            - APP_ENV=prod
+#            - APP_DEBUG=0
+
+
+volumes:
+    ###> doctrine/doctrine-bundle ###
+    database_data:
+###< doctrine/doctrine-bundle ###
