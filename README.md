@@ -1,8 +1,15 @@
-<p align="center">
-    <img src="./assets/images/forumify.svg" width="250" height="250">
-</p>
+# Forumify Production Template
 
-# ForumifyPlatformBundle
+## Deploying to production
+
+### Using docker compose
+
+In `docker-compose.yml` a basic example infrastructure has been provided.
+Replace the values in `environment` and run `docker-compose up -d` to launch forumify in production mode.
+
+Verify your installation by going to `http://your-domain:8000`.
+
+To enable HTTPS, use a proxy, for example [nginx proxy manager](https://nginxproxymanager.com/).
 
 ## Running locally
 
@@ -24,9 +31,9 @@
   - If installing using the binary, add to %PATH%
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-### First time setup
+### First time setup (using docker)
 
-1. Ensure docker desktop is running and start the docker environment
+1. Ensure docker is running and start the docker-compose infrastructure
 
 ```
 docker compose up -d

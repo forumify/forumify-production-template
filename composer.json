@@ -1,10 +1,10 @@
 {
     "type": "project",
-    "license": "proprietary",
+    "license": "OSL-3.0",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "forumify/forumify-platform": "0.1.0",
+        "forumify/forumify-platform": "*",
         "forumify/forumify-perscom-plugin": "*",
         "symfony/flex": "^2",
         "symfony/runtime": "6.3.*"
@@ -22,22 +22,6 @@
             "App\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../forumify-platform",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "../forumify-perscom-plugin",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
