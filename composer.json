@@ -5,7 +5,6 @@
     "prefer-stable": true,
     "require": {
         "forumify/forumify-platform": "*",
-        "forumify/forumify-perscom-plugin": "*",
         "symfony/flex": "^2",
         "symfony/runtime": "6.3.*"
     },
