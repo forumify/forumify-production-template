@@ -5,8 +5,7 @@
     "prefer-stable": true,
     "require": {
         "forumify/forumify-platform": "*",
-        "symfony/flex": "^2",
-        "symfony/runtime": "6.3.*"
+        "symfony/flex": "^2"
     },
     "config": {
         "allow-plugins": {
@@ -39,7 +38,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "6.3.*",
+            "require": "6.4.*",
             "endpoint": [
                 "https://api.github.com/repos/forumify/flex-recipes/contents/index.json?ref=flex/main",
                 "flex://defaults"
