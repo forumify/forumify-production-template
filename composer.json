@@ -5,7 +5,8 @@
     "prefer-stable": true,
     "require": {
         "forumify/forumify-platform": "*",
-        "symfony/flex": "^2"
+        "symfony/flex": "^2",
+        "symfony/runtime": "6.4.*"
     },
     "config": {
         "allow-plugins": {
