@@ -29,6 +29,7 @@ To enable HTTPS, use a proxy, for example [nginx proxy manager](https://nginxpro
 - [NodeJS](https://nodejs.org/en)
 - [Symfony CLI](https://symfony.com/download)
   - If installing using the binary, add to %PATH%
+  - First time you use it, install the TLS certificate: `symfony server:ca:install`
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### First time setup (using docker)
@@ -46,10 +47,10 @@ composer install
 npm install
 ```
 
-3. Install TLS certificate
+3. Install your instance
 
 ```
-symfony server:ca:install
+symfony bin/console forumify:platform:install
 ```
 
 4. Start the symfony development server
@@ -65,17 +66,11 @@ symfony server:start
 npm run watch
 ```
 
-6. Install your instance
-
-```
-php bin/console forumify:platform:install
-```
-
-7. Visit the website at `https://localhost:8000`
+6. Visit the website at `https://localhost:8000`
 
 ### Future launches
 
-1. (Optionally) Update dependencies, see step 2
-2. (Optionally) Upgrade database schema, see step 6
+1. (Optionally) Update dependencies: `composer update` & `npm install`
+2. (Optionally) Run migrations: `symfony console doctrine:mig:mig`
 3. Start symfony server
 4. Start frontend watcher
