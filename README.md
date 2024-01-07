@@ -65,10 +65,10 @@ symfony server:start
 npm run watch
 ```
 
-6. Create a database with example data
+6. Install your instance
 
 ```
-php bin/console forumify:database:fixtures
+php bin/console forumify:platform:install
 ```
 
 7. Visit the website at `https://localhost:8000`
