@@ -6,7 +6,7 @@ COPY composer.* .
 
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs --no-scripts --no-progress
 
-FROM node:lts-slim as frontend-builder
+FROM node:lts as frontend-builder
 
 WORKDIR /usr/src/app
 
