@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "forumify/forumify-platform": "^0.3",
+        "forumify/forumify-platform": "^0.4",
         "symfony/flex": "^2",
         "symfony/runtime": "6.4.*"
     },
